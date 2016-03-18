@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Name.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Name *me = [Name firstName:@"Derek" lastName:@"Cuevas"];
+        
+        NSLog(@"%@", me);
     }
     return 0;
 }
