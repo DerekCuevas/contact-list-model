@@ -10,20 +10,6 @@
 
 @implementation Name
 
-- (NSString *)first {
-    if (!_first) {
-        _first = [[NSString alloc] init];
-    }
-    return _first;
-}
-
-- (NSString *)last {
-    if (!_last) {
-        _last = [[NSString alloc] init];
-    }
-    return _last;
-}
-
 + (id)firstName:(NSString *)first lastName:(NSString *)last {
     Name *name = [[Name alloc] init];
     name.first = first;
