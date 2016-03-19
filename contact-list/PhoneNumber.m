@@ -7,6 +7,7 @@
 //
 
 #import "PhoneNumber.h"
+#import "NSString+PhoneFormatting.h"
 
 @implementation PhoneNumber
 
@@ -16,11 +17,9 @@
     _type = [type uppercaseString];
 }
 
-/*
 - (void)setNumber:(NSString *)number {
     _number = [number phoneFormat];
 }
-*/
 
 - (instancetype)initWithType:(NSString *)type number:(NSString *)number {
     self = [super init];

@@ -11,6 +11,7 @@
 		19D90EDC1C9CB2DA00D6971B /* Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D90EDB1C9CB2DA00D6971B /* Name.m */; };
 		19D90EDF1C9CB61700D6971B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D90EDE1C9CB61700D6971B /* Person.m */; };
 		19D90EE21C9CB6B700D6971B /* PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D90EE11C9CB6B700D6971B /* PhoneNumber.m */; };
+		19D90EE61C9CDA6F00D6971B /* NSString+PhoneFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D90EE51C9CDA6F00D6971B /* NSString+PhoneFormatting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		19D90EDE1C9CB61700D6971B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		19D90EE01C9CB6B700D6971B /* PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumber.h; sourceTree = "<group>"; };
 		19D90EE11C9CB6B700D6971B /* PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumber.m; sourceTree = "<group>"; };
+		19D90EE41C9CDA6F00D6971B /* NSString+PhoneFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+PhoneFormatting.h"; path = "../NSString+PhoneFormatting.h"; sourceTree = "<group>"; };
+		19D90EE51C9CDA6F00D6971B /* NSString+PhoneFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+PhoneFormatting.m"; path = "../NSString+PhoneFormatting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				19D90ED31C9CB27D00D6971B /* main.m */,
+				19D90EE41C9CDA6F00D6971B /* NSString+PhoneFormatting.h */,
+				19D90EE51C9CDA6F00D6971B /* NSString+PhoneFormatting.m */,
 				19D90EDA1C9CB2DA00D6971B /* Name.h */,
 				19D90EDB1C9CB2DA00D6971B /* Name.m */,
 				19D90EDD1C9CB61700D6971B /* Person.h */,
@@ -137,6 +142,7 @@
 				19D90EDC1C9CB2DA00D6971B /* Name.m in Sources */,
 				19D90ED41C9CB27D00D6971B /* main.m in Sources */,
 				19D90EE21C9CB6B700D6971B /* PhoneNumber.m in Sources */,
+				19D90EE61C9CDA6F00D6971B /* NSString+PhoneFormatting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +261,7 @@
 				19D90ED91C9CB27D00D6971B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
