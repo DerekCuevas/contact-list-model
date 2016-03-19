@@ -69,7 +69,7 @@
 #pragma mark - NSObject
 
 - (NSString *)description {
-    return [self.name description];
+    return [NSString stringWithFormat:@"%@ %@", self.name.description, [self phoneNumbersToNSArray]];
 }
 
 @end

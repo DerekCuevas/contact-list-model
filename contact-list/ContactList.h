@@ -18,4 +18,8 @@
 - (NSArray *)phoneNumbersFor:(NSString *)lastName;
 - (NSString *)nameForNumber:(NSString *)number;
 
+#pragma mark - NSObject
+
+- (NSString *)description;
+
 @end

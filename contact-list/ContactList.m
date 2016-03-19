@@ -58,4 +58,10 @@
     return nil;
 }
 
+#pragma mark - NSObject
+
+- (NSString *)description {
+    return [self.contacts description];
+}
+
 @end
