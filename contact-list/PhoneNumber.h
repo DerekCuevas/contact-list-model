@@ -22,18 +22,25 @@ static NSString* const OTHER = @"OTHER";
 @property (strong, nonatomic) NSString *number;
 @property (strong, nonatomic) NSString *type;
 
-- (instancetype)initWithType:(NSString *)type number:(NSString *)number;
+#pragma mark - Initializers
 
+- (instancetype)initWithType:(NSString *)type number:(NSString *)number;
 + (id)type:(NSString *)type number:(NSString *)number;
+
+#pragma mark - Public Instance Methods
 
 - (BOOL)isMobile;
 - (BOOL)isLocal;
-
-- (NSString *)description;
-
 - (NSString *)area;
+
+#pragma mark - Public Class Methods
+
 + (BOOL)isValidType:(NSString *)type;
 + (BOOL)isValidNumber:(NSString *)number;
 + (NSString *)removeNonDigits:(NSString *)number;
+
+#pragma mark - NSObject
+
+- (NSString *)description;
 
 @end

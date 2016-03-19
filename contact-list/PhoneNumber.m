@@ -21,6 +21,8 @@
     _number = [number phoneFormat];
 }
 
+#pragma mark - Initializers
+
 - (instancetype)initWithType:(NSString *)type number:(NSString *)number {
     self = [super init];
     if (self) {
@@ -38,6 +40,8 @@
     return phone;
 }
 
+#pragma mark - Public Instance Methods
+
 - (BOOL)isMobile {
     return [self.type isEqualToString:MOBILE];
 }
@@ -47,18 +51,12 @@
     return [area isEqualToString:@"619"] || [area isEqualToString:@"858"];
 }
 
-#pragma mark - NSObject
-
-- (NSString *)description {
-    return [NSString stringWithFormat:@"%@: %@", self.type, self.number];
-}
-
-#pragma mark - Public Util
-
 - (NSString *)area {
     NSRange range = self.number.length > 3 ? NSMakeRange(0, 3) : NSMakeRange(0, 0);
     return [self.number substringWithRange:range];
 }
+
+#pragma mark - Public Class Methods
 
 + (BOOL)isValidType:(NSString *)type {
     NSArray *types = @[MOBILE, HOME, WORK, MAIN, HOME_FAX, WORK_FAX, PAGER, OTHER];
@@ -72,6 +70,12 @@
 + (NSString *)removeNonDigits:(NSString *)number {
     NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"- "];
     return [[number componentsSeparatedByCharactersInSet:set] componentsJoinedByString:@""];
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%@: %@", self.type, self.number];
 }
 
 @end

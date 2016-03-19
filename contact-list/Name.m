@@ -10,6 +10,8 @@
 
 @implementation Name
 
+#pragma mark - Initializers
+
 + (id)firstName:(NSString *)first lastName:(NSString *)last {
     Name *name = [[Name alloc] init];
     name.first = first;
@@ -17,6 +19,8 @@
     
     return name;
 }
+
+#pragma mark - NSObject
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"(%@ %@)", self.first, self.last];
