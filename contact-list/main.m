@@ -25,6 +25,34 @@ int main(int argc, const char * argv[]) {
         [contacts addPerson:me];
         [contacts addPerson:you];
         
+        [contacts enumerateContactsUsingBlock:^(Person *person) {
+            NSLog(@"%@", person);
+        }];
+        
+        Person *steve = [[Person alloc] init];
+        steve.name = [Name firstName:@"Steve" lastName:@"Jobs"];
+        [steve setPhoneNumber:[PhoneNumber type:HOME number:@"1234567890"]];
+        
+        // blocks
+        double (^square)(double x);
+        
+        square = ^double(double x) {
+            return x * x;
+        };
+        
+        NSLog(@"%f", square(5));
+        
+        __block int i = 0;
+        int (^count)(void) = ^{
+            i += 1;
+            return i;
+        };
+        
+        NSLog(@"%d", count());
+        NSLog(@"%d", count());
+        NSLog(@"%d", count());
+        
+        
         
         NSLog(@"%@", [contacts phoneNumbersFor:me.name.last]);
     }

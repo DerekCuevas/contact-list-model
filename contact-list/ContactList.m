@@ -58,6 +58,12 @@
     return nil;
 }
 
+- (void)enumerateContactsUsingBlock:(void (^)(Person *))block {
+    [self.contacts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        block((Person *)obj);
+    }];
+}
+
 #pragma mark - NSObject
 
 - (NSString *)description {

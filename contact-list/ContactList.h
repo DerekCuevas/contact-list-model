@@ -18,6 +18,8 @@
 - (NSArray *)phoneNumbersFor:(NSString *)lastName;
 - (NSString *)nameForNumber:(NSString *)number;
 
+- (void)enumerateContactsUsingBlock:(void (^)(Person *person))block;
+
 #pragma mark - NSObject
 
 - (NSString *)description;
