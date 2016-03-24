@@ -58,9 +58,9 @@
     return nil;
 }
 
-- (void)enumerateContactsUsingBlock:(void (^)(Person *))block {
+- (void)enumerateContactsUsingBlock:(void (^)(Person *, NSUInteger, BOOL *))block {
     [self.contacts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        block((Person *)obj);
+        block((Person *)obj, idx, stop);
     }];
 }
 

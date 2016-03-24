@@ -25,8 +25,8 @@ int main(int argc, const char * argv[]) {
         [contacts addPerson:me];
         [contacts addPerson:you];
         
-        [contacts enumerateContactsUsingBlock:^(Person *person) {
-            NSLog(@"%@", person);
+        [contacts enumerateContactsUsingBlock:^(Person *person, NSUInteger idx, BOOL *stop) {
+            NSLog(@"Index: %lu, %@", (unsigned long)idx, person);
         }];
         
         Person *steve = [[Person alloc] init];
@@ -34,9 +34,7 @@ int main(int argc, const char * argv[]) {
         [steve setPhoneNumber:[PhoneNumber type:HOME number:@"1234567890"]];
         
         // blocks
-        double (^square)(double x);
-        
-        square = ^double(double x) {
+        double (^square)(double x) = ^double(double x) {
             return x * x;
         };
         
