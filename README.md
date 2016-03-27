@@ -3,11 +3,11 @@ This is a small Objective-C set of examples (think of it as a playground) that h
 
 - Core Objective-C (Foundation) data types (NSString, NSArray, NSDictionaries) and some of their mutable counterparts
 - Properties
-- Lazy initialization of Properties
+- Lazy initialization of Properties ([ContactList.m](contact-list/ContactList.m), [Person.m](contact-list/Person.m))
 - Class Methods, Instance Methods, Accessor Methods
-- Blocks
-- Categories
-- Extensions
+- Blocks ([ContactList.h](contact-list/ContactList.h))
+- Categories ([NSString+PhoneFormatting.h](NSString+PhoneFormatting.h))
+- Extensions ([Person.m](contact-list/Person.m))
 
 Features to add:
 
